@@ -1,0 +1,92 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>The Unfiltered Edition ❤️</title>
+<style>
+*{box-sizing:border-box}
+body{margin:0;padding:20px 12px;background:#fff0f4;color:#392b35;font-family:Arial,sans-serif}
+.container{max-width:650px;margin:auto;background:white;padding:24px;border-radius:20px;box-shadow:0 5px 25px #0001}
+h1{text-align:center;color:#c04472;font-size:27px}
+.intro{text-align:center;line-height:1.6;color:#765968}
+.note{background:#fff0f5;padding:13px;border-radius:12px;line-height:1.5;font-size:14px}
+.name{display:block;font-weight:bold;margin:22px 0 8px}
+input[type=text]{width:100%;padding:13px;border:1px solid #e5cbd6;border-radius:10px;font-size:16px}
+.question{padding:17px 0;border-bottom:1px solid #f0e5eb}
+.question p{font-weight:bold;line-height:1.5}
+.option{display:block;padding:8px 0;line-height:1.4}
+.option input{margin-right:9px;accent-color:#c04472}
+button{width:100%;padding:15px;background:#c04472;color:white;border:0;border-radius:12px;font-size:17px;font-weight:bold;margin-top:24px}
+.footer{text-align:center;color:#927b88;font-size:13px;margin-top:18px}
+</style>
+</head>
+<body>
+<div class="container">
+<h1>The Unfiltered Edition 👀❤️</h1>
+<p class="intro">15 questions. No judgement. Just be yourself! Let's see how deep your answers go. 😂</p>
+
+<div class="note">
+💕 Answer honestly, but only share what you're comfortable sharing. Your answers will be sent to the person who invited you.
+</div>
+
+<form action="https://formsubmit.co/mulombomwahafa171@gmail.com" method="POST">
+<input type="hidden" name="_subject" value="New Unfiltered Edition answers ❤️">
+
+<label class="name" for="friend">Your name</label>
+<input type="text" id="friend" name="Friend's name" placeholder="Enter your name" required>
+
+<div id="questions"></div>
+
+<button type="submit">Submit my answers ❤️</button>
+</form>
+<p class="footer">Thank you for being real! Made with ❤️</p>
+</div>
+
+<script>
+const questions = [
+["What's your biggest weakness?",["I get attached easily","I overthink everything","I trust too quickly","I hide my feelings"]],
+["When you like someone, what do you do?",["I become shy","I flirt","I pretend I don't care","I make it obvious"]],
+["What's your biggest red flag?",["I'm stubborn","I'm jealous","I overthink","I disappear when upset"]],
+["What do you secretly wish for?",["True love","Financial freedom","A peaceful life","A fresh start"]],
+["What hurts you the most?",["Being lied to","Being ignored","Being misunderstood","Feeling replaceable"]],
+["How would you describe your love life?",["Single and happy","Single but looking","It's complicated 😂","I'd rather not say"]],
+["What do people misunderstand about you?",["My silence","My attitude","My kindness","My sense of humour"]],
+["If you could erase one memory, would you?",["Yes, immediately","Maybe one day","No, it made me stronger","I'm not sure"]],
+["What's your biggest fear about the future?",["Failing","Losing loved ones","Ending up alone","Not achieving my dreams"]],
+["What's something you've never admitted out loud?",["I need more affection than I show","I'm not as confident as I look","I miss someone","I have a secret dream"]],
+["What makes you lose interest in someone?",["Poor communication","Dishonesty","Lack of effort","Disrespect"]],
+["When you're emotionally hurt, what happens?",["I cry","I become quiet","I act like nothing happened","I distance myself"]],
+["What's your biggest dream in life?",["To become successful","To have a happy family","To travel the world","To live peacefully and freely"]],
+["Which one describes your heart?",["Soft but guarded","Loving but easily hurt","Strong and independent","Complicated even to myself 😂"]],
+["If you could tell the world one thing about yourself, what would it be?",["I'm stronger than people think","I deserve genuine love","I'm still figuring myself out","There's more to me than meets the eye"]]
+];
+
+const area=document.getElementById("questions");
+
+questions.forEach((q,i)=>{
+ const section=document.createElement("div");
+ section.className="question";
+ const title=document.createElement("p");
+ title.textContent=(i+1)+". "+q[0];
+ section.appendChild(title);
+
+ q[1].forEach(answer=>{
+  const label=document.createElement("label");
+  label.className="option";
+  const radio=document.createElement("input");
+  radio.type="radio";
+  radio.name="Question "+(i+1);
+  radio.value=answer;
+  radio.required=true;
+  label.appendChild(radio);
+  label.appendChild(document.createTextNode(answer));
+  section.appendChild(label);
+ });
+ area.appendChild(section);
+});
+</script>
+</body>
+  </html>
+  
